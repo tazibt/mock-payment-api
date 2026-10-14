@@ -1,6 +1,6 @@
-# mock-payment-sap
+# mock-payment-api
 
-[![CI](https://github.com/tazibt/mock-payment-sap/actions/workflows/ci.yml/badge.svg)](https://github.com/tazibt/mock-payment-sap/actions/workflows/ci.yml)
+[![CI](https://github.com/tazibt/mock-payment-api/actions/workflows/ci.yml/badge.svg)](https://github.com/tazibt/mock-payment-api/actions/workflows/ci.yml)
 ![Java 21](https://img.shields.io/badge/Java-21-blue)
 ![Spring Boot 4](https://img.shields.io/badge/Spring%20Boot-4-green)
 ![License MIT](https://img.shields.io/badge/license-MIT-lightgrey)
@@ -45,8 +45,8 @@ Prérequis : Java 21 (Maven est fourni via le wrapper `mvnw`).
 Ou avec Docker :
 
 ```bash
-docker build -t mock-payment-sap .
-docker run -p 8085:8085 mock-payment-sap
+docker build -t mock-payment-api .
+docker run -p 8085:8085 mock-payment-api
 ```
 
 Le service écoute sur `http://localhost:8085`.

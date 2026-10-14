@@ -4,7 +4,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.startsWith;
 
-import com.mock.payment.MockPaymentSapApplication;
+import com.mock.payment.MockPaymentApplication;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.BeforeAll;
@@ -56,7 +56,7 @@ public class PaymentSteps {
                 "--mock.delay.timeout=300",
                 "--mock.delay.error=100"));
         args.addAll(List.of(extraArgs));
-        return SpringApplication.run(MockPaymentSapApplication.class, args.toArray(String[]::new));
+        return SpringApplication.run(MockPaymentApplication.class, args.toArray(String[]::new));
     }
 
     private static int port(ConfigurableApplicationContext context) {

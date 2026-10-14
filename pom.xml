@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.mock</groupId>
-	<artifactId>mock-payment-sap</artifactId>
+	<artifactId>mock-payment-api</artifactId>
 	<version>1.0.0</version>
-	<name>mock-payment-sap</name>
+	<name>mock-payment-api</name>
 	<description>Mock d'API de paiement configurable pour les tests fonctionnels, d'intégration et de performance</description>
 
 	<properties>
