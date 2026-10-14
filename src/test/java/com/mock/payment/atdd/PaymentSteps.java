@@ -25,7 +25,7 @@ public class PaymentSteps {
     private static ConfigurableApplicationContext app;
     private static int defaultPort;
 
-    // Instance dédiée aux scénarios qui forcent un statut, arrêtée en fin de scénario
+    // lancé seulement pour les scénarios en mode forcé
     private ConfigurableApplicationContext forcedApp;
     private Map<String, Object> request;
     private Response response;
@@ -49,10 +49,10 @@ public class PaymentSteps {
         RestAssured.port = defaultPort;
     }
 
-    // Port aléatoire et délais courts pour garder des tests rapides
     private static ConfigurableApplicationContext start(String... extraArgs) {
         List<String> args = new ArrayList<>(List.of(
                 "--server.port=0",
+                // délais réduits sinon les tests sont trop longs
                 "--mock.delay.timeout=300",
                 "--mock.delay.error=100"));
         args.addAll(List.of(extraArgs));

@@ -8,10 +8,6 @@ import org.junit.platform.suite.api.IncludeEngines;
 import org.junit.platform.suite.api.SelectPackages;
 import org.junit.platform.suite.api.Suite;
 
-/**
- * Lance les scénarios Gherkin de src/test/resources/features.
- * Smoke tests uniquement : mvn test -Dtest=RunCucumberTest "-Dcucumber.filter.tags=@smoke"
- */
 @Suite
 @IncludeEngines("cucumber")
 @SelectPackages("features")

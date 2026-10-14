@@ -33,7 +33,6 @@ public class PaymentController {
 
     private static final Logger log = LoggerFactory.getLogger(PaymentController.class);
 
-    // Utilisé par le HEALTHCHECK Docker et les smoke tests
     @GetMapping("/health")
     public ResponseEntity<String> health() {
         return ResponseEntity.ok("UP");
@@ -101,7 +100,6 @@ public class PaymentController {
         return resp;
     }
 
-    // UUID : identifiant unique même sous forte concurrence (tests de charge)
     private static PaymentResponse accepted() {
         PaymentResponse resp = new PaymentResponse("ACCEPTED", "Paiement autorisé");
         resp.transactionId = "TX-" + UUID.randomUUID();
