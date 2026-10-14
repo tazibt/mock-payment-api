@@ -71,6 +71,12 @@ public class PaymentSteps {
         port(forcedApp);
     }
 
+    @Given("le mock démarré avec le statut forcé {string} et le code d'erreur {string}")
+    public void mockForceAvecCode(String status, String errorCode) {
+        forcedApp = start("--mock.force.status=" + status, "--mock.force.errorCode=" + errorCode);
+        port(forcedApp);
+    }
+
     @When("j'envoie la requête brute {string}")
     public void envoyerRequeteBrute(String body) {
         response = given().contentType(ContentType.JSON).body(body).post("/payment/mock");

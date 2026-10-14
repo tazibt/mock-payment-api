@@ -5,12 +5,12 @@ Fonctionnalité: Robustesse - statuts forcés et requêtes invalides
   afin de vérifier la réaction de l'application testée aux pannes du PSP.
 
   Scénario: Le mode forcé ERROR renvoie une erreur technique
-    Étant donné le mock démarré avec le statut forcé "ERROR"
+    Étant donné le mock démarré avec le statut forcé "ERROR" et le code d'erreur "PSP_UNAVAILABLE"
     Et une demande de paiement de 49,90 € par carte "VISA" pour le client "C-400"
     Quand j'envoie la demande de paiement
     Alors le code HTTP est 500
     Et le statut du paiement est "ERROR"
-    Et le code d'erreur est "CARD_EXPIRED"
+    Et le code d'erreur est "PSP_UNAVAILABLE"
 
   Scénario: Le mode forcé DECLINED refuse tous les paiements
     Étant donné le mock démarré avec le statut forcé "DECLINED"
